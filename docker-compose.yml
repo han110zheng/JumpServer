@@ -5,8 +5,6 @@ services:
     container_name: jms_mysql
     restart: always
     tty: true
-    ports:
-    - 3306:3306
     environment:
       DB_PORT: $DB_PORT
       DB_USER: $DB_USER
@@ -123,4 +121,3 @@ volumes:
 
 networks:
   jumpserver:
-   driver: 'bridge'
