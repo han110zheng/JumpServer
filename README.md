@@ -1,23 +1,21 @@
-#Jumpserver Docker-撰写
+## Jumpserver Docker-Compose
 
-#$ git clone https://github.com/jumpserver/Dockerfile.git
+```
+$ git clone https://github.com/jumpserver/Dockerfile.git
+$ cd Dockerfile
+$ cat .env
+$ docker-compose up
+```
 
-#$ cd Dockerfile
+build
+```
+$ cd Dockerfile
+$ cat .env
+$ docker-compose -f docker-compose-build.yml up
+```
+## 说明
 
-#$ cat .env
+- .env 的变量 用在 docker-compose 里面, 可以自己看下
+可能还有一些未能检测到的问题, 尽量自己调试一遍后再使用
 
-#$ docker-compose up
-
-#建立
-
-#$ cd Dockerfile
-
-#$ cat .env
-
-#$ docker-compose -f docker-compose-build.yml up
-
-#说明
-
-#.env的变量用在docker-compose里面，可以自己看下可能还有一些替换检测到的问题，尝试自己调试一遍后再使用
-
-#如果自己编译，可以在docker-compose的环境：处加入版本：$ Version，取代Dockerfile的ARG
+> 如果自己编译, 可以在 docker-compose 的 environment: 处加入 Version: $Version , 取代 Dockerfile 的 ARG
